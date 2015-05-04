@@ -27,7 +27,7 @@ a:hover {
 html,
 body {
   height: 100%;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://img2.wikia.nocookie.net/__cb20120407173346/mlp/images/a/af/PonyMaker_Bacon.png');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/coverbg_bacon.png');
     background-position:center top;
 
 }

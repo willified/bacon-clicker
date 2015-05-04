@@ -2,7 +2,29 @@ Options +FollowSymLinks
 
 RewriteEngine On
 	
+Redirect permanent /bacon-clicker http://bacon.whuang.net
 
 RewriteCond %{REQUEST_FILENAME} !-d 
 RewriteCond %{REQUEST_FILENAME}\.php -f 
 RewriteRule ^(.*)$ $1.php
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.json -f 
+RewriteRule ^(.*)$ $1.json
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript
+</ifmodule>
+ErrorDocument 403 /
+ErrorDocument 404 /
+ErrorDocument 500 /
+Options All -Indexes  
+IndexIgnore *
+<IfModule mod_speling.c>
+ CheckSpelling On
+</IfModule>
+<ifmodule mod_php4.c>
+ php_value zlib.output_compression 16386
+</ifmodule>
+ServerSignature Off
+SetEnv TZ America/Los_Angeles
+DefaultLanguage en-US
+RewriteEngine On
